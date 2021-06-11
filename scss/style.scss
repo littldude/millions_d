@@ -64,24 +64,17 @@ button:focus {
 }
 .intro {
     overflow: hidden;
-    // background: url('../img/intro/bg.svg'), linear-gradient(180deg, #B9DDE7 0%, #8BC1D0 100%);
     position: relative;
     z-index: 1;
-    // background-repeat: no-repeat;
-    // background-position-x: 100%;
-    // background-position-y: -55%;
-    // &::before {
-    //     content: url('../img/intro/Frame\(2\).svg');
-    //     position: absolute;
-    //     top: 0;
-    //     left: 0;
-    // }
-    // &::after {
-    //     content: url('../img/intro/Frame\(1\).svg');
-    //     position: absolute;
-    //     top: 0;
-    //     right: 0;
-    // }
+    &__how {
+        display: flex;
+        align-items: center;
+        img {
+            display: block;
+            width: 54px;
+            height: 62px;
+        }
+    }
     &__inner {
         padding: 81px 0 153px 0;
         display: flex;
@@ -172,14 +165,7 @@ button:focus {
     }
     &--how {
         position: relative;
-        width: 611px;
-        &::before {
-            content: url('../img/intro/intro-item.svg');
-            z-index: -1;
-            position: absolute;
-            top: 0;
-            left: -70px;
-        }
+        width: 500px;
     }
     &--center {
         text-align: center;
@@ -674,7 +660,6 @@ button:focus {
         }
         &--how {
             margin-top: 30px;
-            order: 3;
             width: 50%;
         }
         &--time {
@@ -697,6 +682,9 @@ button:focus {
             flex-direction: column-reverse;
             margin-top: 30px;
             align-items: flex-start;
+        }
+        &__how {
+            order: 3;
         }
     }
     .program {
@@ -924,6 +912,11 @@ button:focus {
             width: 380px;
             right: -95px;
             z-index: -1;
+        }
+        &__how {
+            img {
+                display: none;
+            }
         }
     }
     .helpful {
